@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @horse.name %>
+</p>
+
+<p>
+  <strong>Ratio:</strong>
+  <%= @horse.ratio %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= @horse.wins %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @horse.place %>
+</p>
+
+<%= link_to 'Edit', edit_horse_path(@horse) %> |
+<%= link_to 'Back', horses_path %>
