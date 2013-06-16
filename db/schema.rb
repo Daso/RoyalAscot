@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130616015005) do
+ActiveRecord::Schema.define(version: 20130616030257) do
 
   create_table "horses", force: true do |t|
     t.string   "name"
@@ -22,15 +22,15 @@ ActiveRecord::Schema.define(version: 20130616015005) do
     t.datetime "updated_at"
   end
 
+  create_table "horses_races", force: true do |t|
+    t.integer "horse_id"
+    t.integer "race_id"
+  end
+
   create_table "races", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "horse1"
-  end
-
-  create_table "table_horses_races", force: true do |t|
-    t.integer "horse_id"
-    t.integer "race_id"
+    t.text     "comment"
   end
 
 end
