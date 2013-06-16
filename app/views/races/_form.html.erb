@@ -1,6 +1,6 @@
 <%= simple_form_for(@race) do |f| %>
    <div class="field">
-    
+    <%= f.association :horses, as: :check_boxes %>
     <%= f.input :comment %>
   </div>
  <div class="actions">

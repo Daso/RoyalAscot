@@ -14,7 +14,6 @@ class RacesController < ApplicationController
 
   # GET /races/new
   def new
-    @horses = Horse.all
     @race = Race.new
 
   end
