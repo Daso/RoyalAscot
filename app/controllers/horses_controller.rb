@@ -28,7 +28,7 @@ class HorsesController < ApplicationController
 
     respond_to do |format|
       if @horse.save
-        format.html { redirect_to @horse, notice: 'Horse was successfully created.' }
+        format.html { redirect_to horses_url, notice: 'Horse was successfully created.' }
         format.json { render action: 'show', status: :created, location: @horse }
       else
         format.html { render action: 'new' }

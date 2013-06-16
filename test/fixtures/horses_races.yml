@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  horse_id: MyString
+  integer: MyString
+  race_id: MyString
+  integer: MyString
+
+two:
+  horse_id: MyString
+  integer: MyString
+  race_id: MyString
+  integer: MyString

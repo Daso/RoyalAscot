@@ -1,31 +1,17 @@
-<%= form_for(@horse) do |f| %>
-  <% if @horse.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@horse.errors.count, "error") %> prohibited this horse from being saved:</h2>
-
-      <ul>
-      <% @horse.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= simple_form_for(@horse) do |f| %>
+  
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.input :name %>
   </div>
   <div class="field">
-    <%= f.label :ratio %><br>
-    <%= f.number_field :ratio %>
+    <%= f.input :ratio %>
   </div>
   <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
+    <%= f.input :wins %>
   </div>
   <div class="field">
-    <%= f.label :place %><br>
-    <%= f.number_field :place %>
+    <%= f.input :places %>
   </div>
   <div class="actions">
     <%= f.submit %>

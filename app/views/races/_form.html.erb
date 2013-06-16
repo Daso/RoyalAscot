@@ -1,17 +1,9 @@
-<%= form_for(@race) do |f| %>
-  <% if @race.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@race.errors.count, "error") %> prohibited this race from being saved:</h2>
-
-      <ul>
-      <% @race.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
+<%= simple_form_for(@race) do |f| %>
+   <div class="field">
+    <%= f.input :horse1, collection: @horses, as: :select %>
+    
+  </div>
+ <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

@@ -1,4 +1,6 @@
 DerbyStatics::Application.routes.draw do
+  resources :horses_races
+
   resources :races
 
   resources :horses

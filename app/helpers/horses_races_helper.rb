@@ -1,0 +1,2 @@
+module HorsesRacesHelper
+end
