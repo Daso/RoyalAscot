@@ -1,6 +1,14 @@
 class RacesController < ApplicationController
   before_action :set_race, only: [:show, :edit, :update, :destroy]
 
+  def total_matrix
+    @horses = Horse.all
+    @matrix = 0
+    @race.horses.each do |horse|       
+      @matrix = @matrix + horse.ratio     
+    end
+ end
+
   # GET /races
   # GET /races.json
   def index
@@ -10,6 +18,7 @@ class RacesController < ApplicationController
   # GET /races/1
   # GET /races/1.json
   def show
+    total_matrix
   end
 
   # GET /races/new
@@ -70,6 +79,6 @@ class RacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def race_params
-      params.require(:race).permit(:comment)
+         params.require(:race).permit(:comment, horse_ids: [])
     end
 end

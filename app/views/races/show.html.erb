@@ -1,16 +1,19 @@
 <p id="notice"><%= notice %></p>
-<%= @race.horses.inspect %>
+<table>
 <tbody>
-
   <% @race.horses.each do |horse| %>
      <tr>
       <td>
         <%= horse.name %>  
       </td>
+      <td>
+       <%= horse.ratio %>  
+      </td>
      </tr>
   <% end %>
-
 </tbody>
-
+</table>
+<h2>La matriz es:</h2>
+<%= @matrix %> <br />
 <%= link_to 'Edit', edit_race_path(@race) %> |
 <%= link_to 'Back', races_path %>
