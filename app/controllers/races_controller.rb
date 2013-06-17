@@ -9,6 +9,11 @@ class RacesController < ApplicationController
     end
  end
 
+  def add_winner
+    set_race
+    @horses = @race.horses
+  end
+
   # GET /races
   # GET /races.json
   def index

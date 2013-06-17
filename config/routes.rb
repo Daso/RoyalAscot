@@ -1,7 +1,11 @@
 DerbyStatics::Application.routes.draw do
   resources :horses_races
 
-  resources :races
+  resources :races do
+    member do
+      get "add_winner"
+    end
+  end
 
   resources :horses
 
